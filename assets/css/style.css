@@ -452,6 +452,10 @@ a:hover, a:focus, a:active {
   position: relative;
 }
 
+#contentView {
+  width: 100%;
+}
+
 .inner-wrapper {
   margin-inline: auto;
   padding-inline: 0.4rem;
@@ -460,8 +464,43 @@ a:hover, a:focus, a:active {
 
 /* _commons.scss */
 /* _headers.scss */
+#headPrimary {
+  width: 12rem;
+  background-color: white;
+}
+
 /* _headers.scss */
 /* _mainPage.scss */
+.layout-sidebar {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#sideMenu {
+  padding: 0.5rem;
+  background-color: rgb(var(--clr-max));
+  color: rgb(var(--clr-text-on-tint)/0.75);
+}
+
+#secLandingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20%, auto));
+  grid-auto-flow: column;
+}
+
+.grid-item {
+  aspect-ratio: 1/1;
+}
+.grid-item.triple {
+  background-color: gray;
+}
+.grid-item.double {
+  background-color: slategray;
+}
+.grid-item.single {
+  background-color: aliceblue;
+}
+
 /* _mainPage.scss */
 /* _subPages.scss */
 /* _subPages.scss */

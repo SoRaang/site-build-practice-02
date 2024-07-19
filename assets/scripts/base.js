@@ -25,3 +25,11 @@ function checkBirth(dateValue) {
 }
 
 btnCheck.addEventListener('click', () => checkBirth(inputBirth.value));
+
+const timeLabel = document.getElementById('currentTime');
+
+setInterval(() => {
+    let now = new Date();
+
+    timeLabel.innerHTML = now.toString();
+}, 1000);

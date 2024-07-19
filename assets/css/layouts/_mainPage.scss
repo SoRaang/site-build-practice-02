@@ -1,5 +1,36 @@
 /* _mainPage.scss */
 
+.layout-sidebar {
+    display: flex;
+    flex-flow: row nowrap;
+}
 
+#sideMenu {
+    padding: .5rem;
+    background-color: rgb(var(--clr-max));
+    color: rgb(var(--clr-text-on-tint) / .75);
+}
+
+#secLandingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, auto));
+    grid-auto-flow: column;
+}
+
+.grid-item {
+    aspect-ratio: 1 / 1;
+
+    &.triple {
+        background-color: gray;
+    }
+
+    &.double {
+        background-color: slategray;
+    }
+
+    &.single {
+        background-color: aliceblue;
+    }
+}
 
 /* _mainPage.scss */

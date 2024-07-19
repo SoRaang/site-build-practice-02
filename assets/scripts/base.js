@@ -1,10 +1,19 @@
-const copyYear = document.getElementById('copyYear');
+const inputBirth = document.getElementById('dtBirth');
+const btnCheck = document.getElementById('btnBirth');
 
-copyYear.innerText = new Date().getFullYear();
+function checkBirth(dateValue) {
+    let thisYear = new Date().getFullYear();
+    let birthYear = new Date(dateValue).getFullYear();
 
-const askGuidebook = document.getElementById('sideBooklet');
-const modalAskForm = document.getElementById('modalAskForm');
-const btnModalClose = document.getElementById('btnModalClose');
+    let yourAge = thisYear - birthYear;
 
-askGuidebook.addEventListener('click', () => modalAskForm.showModal());
-btnModalClose.addEventListener('click', () => modalAskForm.close());
+    if (!!dateValue === false) {
+        alert('날짜가 입력되지 않았습니다.');
+    } else if (yourAge < 0) {
+        alert('아직 안 태어나셨네요');
+    } else {
+        alert(yourAge + '살 이십니다!');
+    }
+}
+
+btnCheck.addEventListener('click', () => checkBirth(inputBirth.value));

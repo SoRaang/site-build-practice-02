@@ -465,6 +465,9 @@ a:hover, a:focus, a:active {
 /* _commons.scss */
 /* _headers.scss */
 #headPrimary {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   width: 12rem;
   background-color: white;
 }

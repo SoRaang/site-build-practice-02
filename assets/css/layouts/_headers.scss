@@ -1,6 +1,9 @@
 /* _headers.scss */
 
 #headPrimary { // 메인 헤더
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
     width: 12rem;
     background-color: white;
 }
